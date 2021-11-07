@@ -56,7 +56,7 @@ namespace OnlineBookStore.Services
                     switch (bookDetail.Genre.ToUpper())
                     {
                         case Helper.GenreCrime:
-                            totalCost += CrimeBooksDiscountRate(bookDetail.Price);
+                            totalCost += item.Quantity * CrimeBooksDiscountRate(bookDetail.Price);
                             break;
 
                         default:
